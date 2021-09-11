@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/checkout.css">
+</head>
+
+<body>
+    <header>
+        <%= require('text-loader!../partials/nav.html') %>
+    </header>
+    <div class="form-container">
+        <div class="form-group">
+            <h2>Checkout</h2>
+            <h3>Contact information</h3>
+            <div class="form-space">
+                <label for="email">Email</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="checkbox">
+                <span>Keep me up to date on exclusive offers</span><input type="checkbox" name="" id="">
+            </div>
+            <h3>Shipping method</h3>
+            <div class="shipping">
+                <input type="radio" id="shipping1"
+                name="shipping" value="delivery">
+                <label for="shipping1">Delivery</label>
+
+                <input type="radio" id="shipping1"
+                name="shipping" value="pickup">
+                <label for="shipping2">Pickup</label>
+            </div>
+            <h3>Shipping adress</h3>
+            <div class="form-space">
+                <label for="email">Full name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-space">
+                <label for="email">Adress</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-space">
+                <label for="email">Appartment</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-space">
+                <label for="email">City</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-space">
+                <label for="email">Phone</label>
+                <input type="text" id="name" required>
+            </div>
+            <h3>Payment method</h3>
+            <div class="shipping">
+                <input type="radio" id="payment1"
+                name="payment" value="delivery">
+                <label for="payment1">Visa</label>
+
+                <input type="radio" id="payment2"
+                name="payment" value="pickup">
+                <label for="payment2">Mastercard</label>
+            </div>
+            <div class="form-space">
+                <label for="email">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-space">
+                <label for="email">Card number</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="ccvContainer">
+                <div class="form-space">
+                    <label for="email">Expiration date</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-space">
+                    <label for="email">CCV</label>
+                    <input type="text" id="name" required>
+                </div>
+            </div>
+            <button class="btn-order" data-bs-toggle="modal" data-bs-target="#myModal"> Order </button>
+        </div>
+
+        <div class="order">
+            <h3>Order summary</h3>
+            <div class="order-container">
+            </div>
+            <h3 class="total-price">Total: <span class="total-price-value">$0</span></h3>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content"> 
+                <div class="modal-body">
+                    <h2>Thanks for your order!</h2>
+                    <p class="modal-description">It has survived not only five centuries, but also the leap into
+                        electronic
+                        typesetting, remaining essentially unchanged. It has survived not only five
+                        centuries, but also the leap into electronic typesetting, remaining essentially
+                        unchanged. </p>
+                    <button type="button" data-bs-dismiss="modal">BACK TO SHOPPING</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%= require('text-loader!../partials/footer.html') %>
+
+    <script src="./js/checkout.js" async defer></script>
+</body>
+
+</html>

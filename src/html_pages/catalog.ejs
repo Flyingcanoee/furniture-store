@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Catalog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/catalog.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <header>
+              <%= require('text-loader!../partials/nav.html') %>
+        </header>
+        
+        <section class="catalog-container">
+          <%= require('text-loader!../partials/modal.html') %>
+            <div class="settings">
+                <h3 class="new-arrivals">NEW ARRIVALS</h3>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        SORT BY
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Date</a></li>
+                      <li><a class="dropdown-item sort-price" href="#">Price low</a></li>
+                      <li><a class="dropdown-item sort-price-high" href="#">Price high</a></li>
+                      <li><a class="dropdown-item sort-default" href="#">Default</a></li>
+                    </ul>
+                  </div> 
+            </div>
+            <div class="catalog-items"> 
+            </div>
+        </section>
+        <button class="see-more-btn">SEE MORE</button>
+        <%= require('text-loader!../partials/footer.html') %>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="./js/catalog.js" async defer></script>
+    </body>
+</html>

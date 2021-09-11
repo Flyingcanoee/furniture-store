@@ -1,0 +1,238 @@
+@import "common";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+}
+
+.form-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20vh;
+    font-family: 'Montserrat', sans-serif;
+    color: $danger;
+    font-size: 14px;
+    .form-group{
+        width: 40%;
+        h2{
+            color: $dark;
+            font-size: 40px;
+            margin-bottom: 2vh;
+            font-weight: bold;
+        }
+        h3{
+            color: $dark;
+            font-size: 22px;
+            margin-bottom: 5vh;
+            margin-top: 5vh;
+            font-weight: bold;
+        }
+        .form-space{
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            input{
+                width: 30vw;
+                height: 45px;
+                border: 1px solid rgb(221, 219, 219);
+                outline: none;
+                margin-top: 1vh;
+                padding-left: 1vw;
+            }
+        }
+        .checkbox{
+            margin-bottom: 5vh;
+            span{
+                margin-right: 2vw; 
+            }
+        }
+        .shipping{
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            label{
+                margin-right: 2vw; 
+            }
+        }
+        .ccvContainer{
+            display: flex;
+            
+            input{
+                width: 12vw;
+                margin-right: 5vw;
+            }
+        }
+        .btn-order{
+            width: 30vw;
+            height: 45px;
+            background-color: $dark;
+            color: $light;
+            margin-top: 5vh;
+            margin-bottom: 15vh;
+            border: none;
+        }
+    }
+    .order{
+        display: flex;
+        flex-direction: column;
+        h3{
+            color: $dark;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .order-container{
+            .buying{
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid rgb(221, 219, 219);
+                margin-bottom: 2vh;
+                button{
+                    align-self: flex-start;
+                    display: none;
+                }
+                .chair-icon{
+                    width: 17vw;
+                    height: 17vw;
+                    margin-right: 5vw;
+                }
+                .chair-info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-right: 5vw;
+                    .chair-quantity{
+                        font-size: 14px;
+                        margin-top: 3vh;
+                    }
+                    .chair-price{
+                        font-size: 16px;
+                        margin-top: 1vh;
+                        color: $dark;
+                    }
+                    .chair-order-name{
+                        font-size: 16px;
+                        color: $dark;
+                        font-weight: bold;
+                    }
+                }
+            }
+        };
+        .total-price{
+            margin-top: 10vh;
+            span{
+                margin-left: 25vw;
+            }
+        }
+    }
+}
+@media (max-width: 800px){
+    .form-container{
+        flex-direction: column-reverse;
+        width: 80%;
+        margin: 10vh auto; 
+        .form-group{
+            width: 100%;
+            margin-top: 3vh;
+            .form-space{
+                input{
+                    width: 50vw;
+                }
+            }
+            .ccvContainer{
+                input{
+                    width: 20vw;
+                }
+            }
+            .btn-order{
+                margin-bottom: 0px;
+            }
+        }
+        
+    }
+    
+}
+@media (max-width: 500px){
+    .form-container{
+        margin: 15vh auto; 
+        .form-group{ 
+            .form-space{
+                input{
+                    width: 80vw;
+                    
+                }
+            }
+            .ccvContainer{
+                input{
+                    width: 30vw;
+                }
+            }
+        }
+        .order{
+            h3{
+                margin-bottom: 10vh;
+            }
+            .buying{
+                padding: 3vh 0;
+            }
+        }
+    }
+}
+
+.modal-dialog{
+    margin: 6.75rem auto;
+    .modal-content{
+        border-radius: 0%;
+        .modal-body{
+            padding: 5%;
+            h2{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 30px;
+                font-weight: bold;
+                color: $dark;
+                text-align: center;
+                width: 70%;
+                letter-spacing: 0.2rem;
+                margin-bottom: 5vh;
+            }
+            p{
+                font-family: 'Montserrat', sans-serif;
+                width: 80%;
+                text-align: justify; 
+                margin-bottom: 5vh;
+            }
+            button{
+                background-color: #F6E3DC;
+                color: $dark;
+                width: 30%;
+                height: 30px;
+                font-size: 12px;
+                align-self: flex-end;
+                border: none;
+            }
+        }
+    }
+}
+@media (max-width: 800px){
+    .modal-content{ 
+        width: 90%;
+        margin: 0 auto;
+        .modal-body{
+            button{
+                width: 40% !important;
+            }
+        }
+    }
+}
+
+.displayed {
+    display: flex !important; 
+}

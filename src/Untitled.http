@@ -1,0 +1,11 @@
+POST https://furniture-a1bbb-default-rtdb.europe-west1.firebasedatabase.app/.json
+Content-Type:   application/json
+
+ { 
+    "name": "Carven chair", 
+    "price": "$285",
+    "img": "./images/clear products/Product-16.png"
+    }
+
+    
+### 

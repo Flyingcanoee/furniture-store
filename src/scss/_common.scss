@@ -1,0 +1,208 @@
+
+
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+$danger:        #9B9797 !default;
+$light:         white !default;
+$dark:          #726161 !default;
+
+
+@import "bootstrap";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+} 
+
+.navbar{
+    position: fixed;
+    width: 100vw;
+    z-index: 40 !important;
+    display: block;
+    top: 0;
+    .nav-link{
+        z-index: 5;
+    }
+    .basket{
+        width: 25px; 
+    }
+}
+
+footer{
+    width: 100%;
+    background-color: #383737;
+    
+    .footer-container{
+        width: 80%;
+        margin: 0 auto;
+        height: 50vh;
+        margin-top: 5vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        a{
+            text-decoration: none;
+           
+            h1{
+                color: #E8E3E3;
+                font-size: 28px;
+                font-weight: bold;
+                letter-spacing: 0.2rem;
+                
+            }
+        }
+        .footer-content{
+            display: flex;
+            flex-direction: column;
+            h2{
+                color: #E8E3E3;
+                font-size: 15px;
+                margin-bottom: 5vh;
+                letter-spacing: 0.2rem;
+              
+            }
+            a{
+                color: #9B9797;
+                font-size: 15px;
+                cursor: pointer;
+                margin-top: 3vh;
+                text-decoration: none;
+                &:hover{
+                    color: $dark;
+                }
+            }
+    
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    footer{ 
+        .footer-container{
+            height: 30vh;
+        }
+    }
+}
+@media (max-width: 768px){
+    footer{ 
+        .footer-container{
+            height: 20vh;
+            .footer-content{
+                a{
+                    display: none;
+                }
+                h2{
+                    display: none;
+                }
+            }
+            .footer-icons{
+                display: flex;
+                justify-content: space-between;
+                width: 100px;
+                height: 40px;
+                align-items: center;
+                margin-left: 10%;
+                .icon{
+                    width: 20px;
+                    height: 20px;
+                }
+                .instagram{
+                    background-image: url(../images/icons/instagram.png);
+                    background-size: cover;
+                }
+                .facebook{
+                    background-image: url(../images/icons/facebook.png);
+                    background-size: cover;
+                }
+                .pinterest{
+                    background-image: url(../images/icons/pinterest.png);
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+.modal-content{
+    .modal-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .btn-close{
+            align-self: flex-end;
+        }
+        .modal-image{
+        width: 300px;
+        }
+        h2{
+            font-size: 26px;
+            color: $dark;
+            margin: 0;
+            margin-top: 5vh;
+            margin-bottom: 2vh;
+        }
+        p{
+            color: #9B9797;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        h3{
+            font-size: 18px;
+            color: $dark;
+        }
+        .modal-description{
+            color: $dark;
+            width: 60%;
+            text-align: center;
+        }
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vh;
+        .modal-input-button{
+            display: flex;
+            flex-direction: row;
+            height: 35px;
+            .add-one{
+                border: 1px solid black;
+                font-size: 14px;
+            }
+            .chair-quantity{
+                border: none;
+                text-decoration: none;
+                background-color: #F6E3DC;
+                margin-right: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        a{
+            .order{
+                background-color: $dark;
+                margin-top: 4vh;
+                color: $light;
+            }
+        }
+    }
+}
+@media (max-width: 800px){
+        .modal-content{
+            .buttons{
+                .modal-input-button{
+                    .add-one{ 
+                        font-size: 11px;
+                    }
+                    .modal-input{
+                        width: 20vw;
+                    }
+            }
+        }
+    }
+}

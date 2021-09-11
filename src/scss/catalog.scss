@@ -1,0 +1,121 @@
+@import "common";
+*{
+    margin: 0px;
+    padding: 0px;
+} 
+
+.catalog-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15vh;
+    margin-top: 80px;
+    .settings{
+        width: 20%;
+        margin-left: 3vw;
+        margin-top: 5vh;
+        z-index: 1;
+        h3{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            color: $dark;
+            cursor: pointer;
+        }
+        .dropdown{
+             .btn-secondary{
+                 color: $dark;
+                 border: none;
+                 background-color: white;
+                 font-family: 'Montserrat', sans-serif;
+                font-size: 15px; 
+                padding-left: 0px;
+                margin-top: 5vh;
+             }
+        }
+    }
+    .catalog-items{
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap; 
+        .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 30%;
+            cursor: pointer;
+            .chair-photo{
+                width: 22vw;
+                height: 22vw;
+            }
+            .chair-name{
+                color: #726161;
+                font-size: 10px;
+                font-weight: bold;
+            }
+            .price{
+                color: #9B9797;
+                font-weight: normal;
+                font-size: 2vh;
+            }
+        }
+    }
+}
+
+.see-more-btn{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Montserrat' sans-serif;
+    border: 1px solid $dark;
+    padding: 15px;
+    width: 130px;
+    text-align: center;
+    left: 70%;
+    position: relative;
+    color: $dark;
+}
+
+@media (max-width: 800px){
+    .catalog-container{
+        flex-direction: column;
+        .catalog-items{
+            width: 90%;
+            margin: 0 auto;
+            .item{
+                width: 50%;
+                .chair-photo{
+                    width: 35vw;
+                    height: 35vw;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 500px){
+   body{
+       .catalog-container{
+           width: 100%;
+           .catalog-items{
+               margin: 0 auto;
+               .item{
+                   width: 100%;
+                   .chair-photo{
+                       width: 65vw;
+                       height: 65vw;
+                   }
+               }
+           }
+       }
+       .see-more-btn{
+           left: 60%;
+       }
+   } 
+}
+
+.second, .third{
+    display: none !important;
+}
+.displayed{
+    display: flex;
+}
