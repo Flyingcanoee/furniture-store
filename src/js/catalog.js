@@ -2,6 +2,8 @@ let placeholder = document.querySelector(".catalog-items");
 let chairs;
 let chairsDefault;
 let id;
+let basketAmount = document.querySelector(".amount-of-chairs")
+basketAmount.innerHTML = localStorage.getItem('amountOfChairs');
 //получение стульев
 
 function getChairsDescription() {
@@ -141,9 +143,3 @@ modalEvent.addEventListener('hidden.bs.modal', function (e) {
     chairQuantity.innerHTML = 1;
 })
 
-// New arrivals
-
-let arrivalsBtn = document.querySelector(".new-arrivals");
-arrivalsBtn.onclick = () =>{
-    alert("something could be there...")
-}

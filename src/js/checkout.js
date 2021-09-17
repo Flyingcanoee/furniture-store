@@ -36,6 +36,9 @@ function getChairsDescription(chairId, chairQuantity) {
 let checkoutPlaceholder = document.querySelector(".order-container");
 let totalPrice = document.querySelector(".total-price-value");
 let currentPrice = 0;
+let amountOfChairs = 0;
+let basketAmount = document.querySelector(".amount-of-chairs"); 
+
 function renderChairs(img, name, price, id, quantity) {
     const template = `
             <div class="buying">
@@ -48,6 +51,9 @@ function renderChairs(img, name, price, id, quantity) {
             <button type="button" class="btn-close displayed" onclick="deleteElement('${id}')"></button>
             </div>
             `;
+    amountOfChairs += 1;
+    localStorage.setItem("amountOfChairs", amountOfChairs);
+    basketAmount.innerHTML = localStorage.getItem('amountOfChairs');
     checkoutPlaceholder.innerHTML = checkoutPlaceholder.innerHTML + template;
     price = price * quantity;
     if(currentPrice === 0){
@@ -59,6 +65,7 @@ function renderChairs(img, name, price, id, quantity) {
 }
 
 window.deleteElement = function (chairId){
+    amountOfChairs = 0;
     let chairsStringArray = localStorage.getItem('chairsArray');
     let chairsArray = JSON.parse(chairsStringArray);
     chairsInBasket = chairsInBasket.filter(function(chair) {
@@ -66,6 +73,7 @@ window.deleteElement = function (chairId){
     });
     checkoutPlaceholder.innerHTML = '';
     currentPrice = 0; 
+    basketAmount.innerHTML = "0";
     for(let i=0; i<chairsInBasket.length; i++){
         renderChairs(chairsInBasket[i].img, chairsInBasket[i].name, 
                     chairsInBasket[i].price, chairsInBasket[i].id, chairsInBasket[i].quantity);
@@ -80,4 +88,5 @@ window.deleteElement = function (chairId){
         totalPrice.innerHTML = "$0";
     }
 }
+
 

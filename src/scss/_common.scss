@@ -27,8 +27,14 @@ $dark:          #726161 !default;
     .nav-link{
         z-index: 5;
     }
+    .basket-container{
+        display: flex;
+        flex-direction: row;
+        margin-right: 1vw;
+    }
     .basket{
         width: 25px; 
+        margin-right: 1vw;
     }
 }
 

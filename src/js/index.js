@@ -4,6 +4,8 @@ window.$ = require('jquery')
 let navContacts = document.getElementById("navContacts")
 let navAbout = document.getElementById("navAbout")
 let navInteriors = document.getElementById("navInteriors")
+let basketAmount = document.querySelector(".amount-of-chairs")
+basketAmount.innerHTML = localStorage.getItem('amountOfChairs');
 navContacts.onclick = function scrollTo() {
     smoothScrollingTo('#contacts');
 }

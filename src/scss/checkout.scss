@@ -48,6 +48,10 @@ header{
                 outline: none;
                 margin-top: 1vh;
                 padding-left: 1vw;
+                &:focus{
+                    background-color: rgb(235, 238, 238);
+                    border: 1px solid rgb(195, 195, 253);
+                }
             }
         }
         .checkbox{
@@ -200,7 +204,7 @@ header{
                 color: $dark;
                 text-align: center;
                 width: 70%;
-                letter-spacing: 0.2rem;
+                letter-spacing: 0.1rem;
                 margin-bottom: 5vh;
             }
             p{
