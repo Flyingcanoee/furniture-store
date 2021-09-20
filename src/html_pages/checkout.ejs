@@ -19,19 +19,21 @@
         <%= require('text-loader!../partials/nav.html') %>
     </header>
     <div class="form-container">
-        <div class="form-group">
+        <form method="POST" action="form-handler" onsubmit="doValidation(event)" class="form-group">
             <h2>Checkout</h2>
             <h3>Contact information</h3>
             <div class="form-space">
                 <label for="email">Email</label>
-                <input type="text" id="name" required>
+                <input type="text" required id="name" required
+                    oninvalid="this.setCustomValidity('Enter email properly!')" oninput="this.setCustomValidity('')"
+                    pattern='^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'>
             </div>
             <div class="checkbox">
                 <span>Keep me up to date on exclusive offers</span><input type="checkbox" name="" id="">
             </div>
             <h3>Shipping method</h3>
             <div class="shipping">
-                <input type="radio" id="shipping1" name="shipping" value="delivery">
+                <input type="radio" id="shipping1" name="shipping" value="delivery" required>
                 <label for="shipping1">Delivery</label>
 
                 <input type="radio" id="shipping2" name="shipping" value="pickup">
@@ -39,53 +41,57 @@
             </div>
             <h3>Shipping adress</h3>
             <div class="form-space">
-                <label for="email">Full name</label>
+                <label>Full name</label>
                 <input type="text" id="name" required>
             </div>
             <div class="form-space">
-                <label for="email">Adress</label>
-                <input type="text" id="name" required>
+                <label>Adress</label>
+                <input type="text" id="aress" required>
             </div>
             <div class="form-space">
-                <label for="email">Appartment</label>
-                <input type="text" id="name" required>
+                <label>Appartment</label>
+                <input type="text" id="appartment" required>
             </div>
             <div class="form-space">
-                <label for="email">City</label>
-                <input type="text" id="name" required>
+                <label>City</label>
+                <input type="text" placeholder="Saint-Petersbourg" id="city" required>
             </div>
             <div class="form-space">
-                <label for="email">Phone</label>
-                <input type="text" id="name" required>
+                <label>Phone</label>
+                <input oninput="phoneNumberFormatter()" type="text" placeholder="8(***)***-**-**" maxlength="15"
+                    id="phone" required>
             </div>
             <h3>Payment method</h3>
             <div class="shipping">
-                <input type="radio" id="payment1" name="payment" value="delivery">
+                <input type="radio" id="payment1" name="payment" value="delivery" required>
                 <label for="payment1">Visa</label>
 
                 <input type="radio" id="payment2" name="payment" value="pickup">
                 <label for="payment2">Mastercard</label>
             </div>
             <div class="form-space">
-                <label for="email">Name</label>
-                <input type="text" id="name" required>
+                <label>Name</label>
+                <input type="text" placeholder="Oleg Olegovich" pattern="^[A-Za-zА-Яа-яЁё]+$" id="name" required>
             </div>
             <div class="form-space">
-                <label for="email">Card number</label>
-                <input type="text" id="name" required>
+                <label>Card number</label>
+                <input type="text" oninput="cardFormatter()" maxlength="19" placeholder="**** **** **** ****" id="card" required>
             </div>
             <div class="ccvContainer">
                 <div class="form-space">
-                    <label for="email">Expiration date</label>
-                    <input type="text" id="name" required>
+                    <label>Expiration date</label>
+                    <input type="text" oninput="dateFormatter()" placeholder="dd/mm/yyyy" maxlength="10" id="date"
+                        required>
                 </div>
                 <div class="form-space">
-                    <label for="email">CCV</label>
-                    <input type="text" id="name" required>
+                    <label>CCV</label>
+                    <input type="text" placeholder="***" maxlength="3" id="" pattern="\d{3}"
+                    oninvalid="this.setCustomValidity('Enter three digits on the back side of your card')"
+                    oninput="this.setCustomValidity('')" required>
                 </div>
             </div>
-            <button class="btn-order" data-bs-toggle="modal" data-bs-target="#myModal"> Order </button>
-        </div>
+            <button type="submit" class="btn-order"> Order </button>
+        </form>
 
         <div class="order">
             <h3>Order summary</h3>

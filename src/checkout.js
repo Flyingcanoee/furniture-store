@@ -1,4 +1,5 @@
-window.$ = require('jquery')
+window.$ = require('jquery');
+window.bootstrap = require('bootstrap');
 
 // Scripts
 import './js/checkout.js'
@@ -10,4 +11,4 @@ import './scss/checkout.scss';
 
 // Libraries
 
-import 'bootstrap';
+// import 'bootstrap';

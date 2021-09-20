@@ -1,17 +1,17 @@
 @import "common";
 
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
 
-header{
+header {
     position: fixed;
     top: 0;
 }
 
-.form-container{
+.form-container {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -19,63 +19,83 @@ header{
     font-family: 'Montserrat', sans-serif;
     color: $danger;
     font-size: 14px;
-    .form-group{
+
+    .form-group {
         width: 40%;
-        h2{
+
+        h2 {
             color: $dark;
             font-size: 40px;
             margin-bottom: 2vh;
             font-weight: bold;
         }
-        h3{
+
+        h3 {
             color: $dark;
             font-size: 22px;
             margin-bottom: 5vh;
             margin-top: 5vh;
             font-weight: bold;
         }
-        .form-space{
+
+        .form-space {
             margin-top: 2vh;
             margin-bottom: 2vh;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            
-            input{
+
+            input {
                 width: 30vw;
                 height: 45px;
                 border: 1px solid rgb(221, 219, 219);
                 outline: none;
                 margin-top: 1vh;
                 padding-left: 1vw;
-                &:focus{
+
+                &:focus {
                     background-color: rgb(235, 238, 238);
                     border: 1px solid rgb(195, 195, 253);
                 }
+
             }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            input[type=number] {
+                -moz-appearance: textfield;
+              }
         }
-        .checkbox{
+
+        .checkbox {
             margin-bottom: 5vh;
-            span{
-                margin-right: 2vw; 
+
+            span {
+                margin-right: 2vw;
             }
         }
-        .shipping{
+
+        .shipping {
             margin-top: 5vh;
             margin-bottom: 5vh;
-            label{
-                margin-right: 2vw; 
+
+            label {
+                margin-right: 2vw;
             }
         }
-        .ccvContainer{
+
+        .ccvContainer {
             display: flex;
-            
-            input{
+
+            input {
                 width: 12vw;
                 margin-right: 5vw;
             }
         }
-        .btn-order{
+
+        .btn-order {
             width: 30vw;
             height: 45px;
             background-color: $dark;
@@ -85,119 +105,145 @@ header{
             border: none;
         }
     }
-    .order{
+
+    .order {
         display: flex;
         flex-direction: column;
-        h3{
+
+        h3 {
             color: $dark;
             font-weight: bold;
             font-size: 22px;
         }
-        .order-container{
-            .buying{
+
+        .order-container {
+            .buying {
                 display: flex;
                 align-items: center;
                 border-bottom: 1px solid rgb(221, 219, 219);
                 margin-bottom: 2vh;
-                button{
+
+                button {
                     align-self: flex-start;
                     display: none;
                 }
-                .chair-icon{
+
+                .chair-icon {
                     width: 17vw;
                     height: 17vw;
                     margin-right: 5vw;
                 }
-                .chair-info{
+
+                .chair-info {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     margin-right: 5vw;
-                    .chair-quantity{
+
+                    .chair-quantity {
                         font-size: 14px;
                         margin-top: 3vh;
                     }
-                    .chair-price{
+
+                    .chair-price {
                         font-size: 16px;
                         margin-top: 1vh;
                         color: $dark;
                     }
-                    .chair-order-name{
+
+                    .chair-order-name {
                         font-size: 16px;
                         color: $dark;
                         font-weight: bold;
                     }
                 }
             }
-        };
-        .total-price{
+        }
+
+        ;
+
+        .total-price {
             margin-top: 10vh;
-            span{
+
+            span {
                 margin-left: 25vw;
             }
         }
     }
 }
-@media (max-width: 800px){
-    .form-container{
+
+@media (max-width: 800px) {
+    .form-container {
         flex-direction: column-reverse;
         width: 80%;
-        margin: 10vh auto; 
-        .form-group{
+        margin: 10vh auto;
+
+        .form-group {
             width: 100%;
             margin-top: 3vh;
-            .form-space{
-                input{
+
+            .form-space {
+                input {
                     width: 50vw;
                 }
             }
-            .ccvContainer{
-                input{
+
+            .ccvContainer {
+                input {
                     width: 20vw;
                 }
             }
-            .btn-order{
+
+            .btn-order {
                 margin-bottom: 0px;
             }
         }
-        
+
     }
-    
+
 }
-@media (max-width: 500px){
-    .form-container{
-        margin: 15vh auto; 
-        .form-group{ 
-            .form-space{
-                input{
+
+@media (max-width: 500px) {
+    .form-container {
+        margin: 15vh auto;
+
+        .form-group {
+            .form-space {
+                input {
                     width: 80vw;
-                    
+
                 }
             }
-            .ccvContainer{
-                input{
+
+            .ccvContainer {
+                input {
                     width: 30vw;
                 }
             }
         }
-        .order{
-            h3{
+
+        .order {
+            h3 {
                 margin-bottom: 10vh;
             }
-            .buying{
+
+            .buying {
                 padding: 3vh 0;
             }
         }
     }
 }
 
-.modal-dialog{
+.modal-dialog {
     margin: 6.75rem auto;
-    .modal-content{
+
+    .modal-content {
         border-radius: 0%;
-        .modal-body{
+
+        .modal-body {
             padding: 5%;
-            h2{
+
+            h2 {
                 font-family: 'Montserrat', sans-serif;
                 font-size: 30px;
                 font-weight: bold;
@@ -207,13 +253,15 @@ header{
                 letter-spacing: 0.1rem;
                 margin-bottom: 5vh;
             }
-            p{
+
+            p {
                 font-family: 'Montserrat', sans-serif;
                 width: 80%;
-                text-align: justify; 
+                text-align: justify;
                 margin-bottom: 5vh;
             }
-            button{
+
+            button {
                 background-color: #F6E3DC;
                 color: $dark;
                 width: 30%;
@@ -225,12 +273,14 @@ header{
         }
     }
 }
-@media (max-width: 800px){
-    .modal-content{ 
+
+@media (max-width: 800px) {
+    .modal-content {
         width: 90%;
         margin: 0 auto;
-        .modal-body{
-            button{
+
+        .modal-body {
+            button {
                 width: 40% !important;
             }
         }
@@ -238,5 +288,5 @@ header{
 }
 
 .displayed {
-    display: flex !important; 
+    display: flex !important;
 }

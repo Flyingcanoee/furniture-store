@@ -71,7 +71,7 @@ footer{
                 letter-spacing: 0.2rem;
               
             }
-            a{
+            a {
                 color: #9B9797;
                 font-size: 15px;
                 cursor: pointer;
@@ -79,6 +79,12 @@ footer{
                 text-decoration: none;
                 &:hover{
                     color: $dark;
+                }
+            }
+            .contact{
+                cursor: auto;
+                &:hover{
+                    color: #9B9797;
                 }
             }
     
