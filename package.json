@@ -24,6 +24,7 @@
     "bootstrap": "^5.0.2",
     "file-loader": "^6.2.0",
     "jquery": "^3.6.0",
+    "lottie-web": "^5.7.13",
     "text-loader": "0.0.1"
   }
 }

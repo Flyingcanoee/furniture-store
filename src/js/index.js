@@ -1,4 +1,24 @@
-window.$ = require('jquery')
+window.$ = require('jquery');
+window.lottie = require('lottie-web');
+
+let allCont = document.querySelector('.all-content');
+
+//animation
+let animation = lottie.loadAnimation({
+    container: document.getElementById('anim'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'ChairLottie.json'
+})
+
+window.onload = function () {
+    let el = document.getElementById('anim');
+    window.setTimeout(function () {
+        el.style.display = 'none';   
+        document.body.style['overflow-y'] = "scroll";
+    }, 3500);
+};
 
 // //скролл страницы
 let navContacts = document.getElementById("navContacts")

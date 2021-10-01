@@ -8,7 +8,7 @@ window.jQuery = window.$;
 
 // Styles
 
-import './scss/index.scss'
+import './scss/index.scss';
 
 // Libraries
 

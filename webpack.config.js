@@ -63,6 +63,10 @@ module.exports = {
         {
           from: "src/images/",
           to: "images/"
+        },
+        {
+          from: "./ChairLottie.json",
+          to: "./"
         }
       ]
     })

@@ -1,9 +1,32 @@
+window.lottie = require('lottie-web');
+
 let placeholder = document.querySelector(".catalog-items");
 let chairs;
 let chairsDefault;
 let id;
 let basketAmount = document.querySelector(".amount-of-chairs")
 basketAmount.innerHTML = localStorage.getItem('amountOfChairs');
+
+let allCont = document.querySelector('.all-content');
+allCont.style.display = 'none';
+
+//animation
+let animation = lottie.loadAnimation({
+    container: document.getElementById('anim'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'ChairLottie.json'
+})
+
+window.onload = function(){
+    let el = document.getElementById('anim');
+    window.setTimeout(function () {
+        el.style.display = 'none';
+        allCont.style.display = 'block';
+      }, 3000);
+  };
+
 //получение стульев
 
 function getChairsDescription() {
