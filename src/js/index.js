@@ -16,7 +16,7 @@ window.onload = function () {
     let el = document.getElementById('anim');
     window.setTimeout(function () {
         el.style.display = 'none';   
-        document.body.style['overflow-y'] = "scroll";
+        document.body.classList.add('scroll');
     }, 3500);
 };
 
@@ -160,3 +160,4 @@ window.modalModify = (img, name, price, quantity, id) => {
         localStorage.setItem("chairsArray", stringChairsArray);
     }
 }
+

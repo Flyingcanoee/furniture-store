@@ -113,6 +113,10 @@ footer {
     }
 }
 
+.scroll{
+    overflow-y: scroll;
+}
+
 @media (max-width: 1200px) {
     footer {
         .footer-container {

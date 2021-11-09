@@ -1,6 +1,3 @@
-const {
-    event
-} = require("jquery");
 
 document.body.style['overflow-y'] = "scroll";
 
