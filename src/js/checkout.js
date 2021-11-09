@@ -2,6 +2,8 @@ const {
     event
 } = require("jquery");
 
+document.body.style['overflow-y'] = "scroll";
+
 function getOrder() {
     let chairsStringArray = localStorage.getItem('chairsArray');
     if (!chairsStringArray) {

@@ -24,6 +24,7 @@ window.onload = function(){
     window.setTimeout(function () {
         el.style.display = 'none';
         allCont.style.display = 'block';
+        document.body.style['overflow-y'] = "scroll";
       }, 3000);
   };
 

@@ -20,7 +20,7 @@ window.onload = function () {
     }, 3500);
 };
 
-// //скролл страницы
+// скролл страницы
 let navContacts = document.getElementById("navContacts")
 let navAbout = document.getElementById("navAbout")
 let navInteriors = document.getElementById("navInteriors")
